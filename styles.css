@@ -14,7 +14,6 @@ margin-bottom: 20px;
 }
 .projects {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
   gap: 30px; /* space between cards */
   justify-items: center; /* center each card */
   max-width: 1200px;
