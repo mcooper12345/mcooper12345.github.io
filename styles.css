@@ -15,34 +15,35 @@ margin-bottom: 20px;
 .projects {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: center; /* centers rows */
   gap: 20px; /* space between cards */
+  max-width: 1200px; /* keeps them from stretching too wide */
+  margin: 0 auto; /* centers the group on the page */
 }
 
 .project {
-  flex: 1 1 300px; /* flexible width, minimum 300px */
-  max-width: 350px;
+  flex: 1 1 calc(33.333% - 40px); /* 3 cards per row with gaps */
+  max-width: 350px; /* prevent overly wide cards */
   background: white;
   border-radius: 15px;
   padding: 15px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  overflow: hidden; /* keeps images from spilling out */
+  overflow: hidden;
+  box-sizing: border-box;
+  text-align: center;
 }
 
 .project img {
-  width: 100%; /* fits the card */
-  height: auto; /* keeps proportions */
+  width: 100%;
+  height: auto;
   border-radius: 10px;
   display: block;
   margin: 0 auto 10px auto;
+  border: 2px solid rgb(126, 14, 201);
 }
 
-.project img{
-width: 300px;
-height: 300px;
-margin: 10px;
-border: 2px solid rgb(126, 14, 201); /* choose a color */
-display: block;
-margin: auto;
+.contact {
+  text-align: center;
+  margin-top: 40px;
 }
 
