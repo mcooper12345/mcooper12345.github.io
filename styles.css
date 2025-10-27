@@ -13,33 +13,37 @@ text-shadow: 2px 2px 4px rgba(69, 42, 19, 0.3);
 margin-bottom: 20px;
 }
 .projects {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; /* centers rows */
-  gap: 20px; /* space between cards */
-  max-width: 1200px; /* keeps them from stretching too wide */
-  margin: 0 auto; /* centers the group on the page */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+  gap: 30px; /* space between cards */
+  justify-items: center; /* center each card */
+  max-width: 1200px;
+  margin: 0 auto; /* center the entire grid */
 }
 
 .project {
-  flex: 1 1 calc(33.333% - 40px); /* 3 cards per row with gaps */
-  max-width: 350px; /* prevent overly wide cards */
   background: white;
   border-radius: 15px;
   padding: 15px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  width: 320px; /* consistent card width */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
   overflow: hidden;
-  box-sizing: border-box;
   text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
 .project img {
   width: 100%;
   height: auto;
   border-radius: 10px;
-  display: block;
-  margin: 0 auto 10px auto;
   border: 2px solid rgb(126, 14, 201);
+  display: block;
+  margin-bottom: 10px;
 }
 
 .contact {
