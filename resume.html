@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mikenna Cooper — Resume</title>
+  <style>
+    /* Simple responsive styling */
+    :root{
+      --accent:#0b6cff;
+      --muted:#666;
+      --paper:#fff;
+      --bg:#f4f6fb;
+      --max-width:900px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:var(--bg);
+      color:#111;
+      line-height:1.4;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:24px;
+      display:flex;
+      justify-content:center;
+      align-items:flex-start;
+      gap:16px;
+      font-size:16px;
+    }
+    .resume {
+      width:100%;
+      max-width:var(--max-width);
+      background:var(--paper);
+      border-radius:12px;
+      box-shadow:0 6px 24px rgba(20,30,60,0.08);
+      padding:28px;
+      box-sizing:border-box;
+    }
+
+    header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      margin-bottom:18px;
+      flex-wrap:wrap;
+    }
+
+    .name {
+      font-size:28px;
+      font-weight:700;
+      letter-spacing:-0.4px;
+    }
+    .contact {
+      text-align:right;
+      color:var(--muted);
+      font-size:14px;
+    }
+    .contact a{color:inherit; text-decoration:none}
+
+    .two-col{
+      display:grid;
+      grid-template-columns: 1fr 320px;
+      gap:28px;
+      align-items:start;
+    }
+
+    @media (max-width:880px){
+      .two-col{grid-template-columns:1fr}
+      .contact{text-align:left;margin-top:8px}
+    }
+
+    section{margin-bottom:18px}
+    h2 {
+      margin:0 0 10px 0;
+      font-size:16px;
+      color:var(--accent);
+      letter-spacing:0.2px;
+    }
+    .muted { color:var(--muted); font-size:14px; }
+
+    ul { margin:8px 0 0 18px; padding:0; }
+    li { margin-bottom:8px; }
+
+    .job {
+      margin-bottom:12px;
+    }
+    .job h3{
+      margin:0;
+      font-size:15px;
+      font-weight:600;
+    }
+    .job .meta{
+      font-size:13px;
+      color:var(--muted);
+      margin-bottom:6px;
+    }
+    .skills-list{display:flex;flex-wrap:wrap;gap:8px}
+    .skill-pill{
+      background:#f0f6ff;
+      color:#034fa6;
+      padding:6px 10px;
+      border-radius:999px;
+      font-size:13px;
+    }
+    .award { font-weight:600; color:#111; }
+  </style>
+</head>
+<body>
+  <article class="resume" role="article" aria-labelledby="name">
+    <header>
+      <div>
+        <div id="name" class="name">Mikenna Cooper</div>
+        <div class="muted">Bachelor of Science in Computer Science — University of South Carolina (May 2029)</div>
+      </div>
+      <div class="contact" aria-label="Contact information">
+        <div>+1 (470) 855-4117</div>
+        <div><a href="mailto:mikennac@email.sc.edu">mikennac@email.sc.edu</a></div>
+        <div>Columbia, SC 29208</div>
+      </div>
+    </header>
+
+    <div class="two-col">
+      <!-- Main column -->
+      <main>
+        <section aria-labelledby="education">
+          <h2 id="education">Education</h2>
+          <p><strong>University of South Carolina — Columbia, SC</strong> — <span class="muted">Bachelor of Science in Computer Science, May 2029</span></p>
+          <p class="muted">Honors and Awards: Dean Scholar, STEM Scholarship, Capstone Scholar</p>
+        </section>
+
+        <section aria-labelledby="work">
+          <h2 id="work">Work Experience</h2>
+
+          <div class="job">
+            <h3>Business Owner / Stylist</h3>
+            <div class="meta">Hair Business — Columbia, SC · August 2023 – Present</div>
+            <ul>
+              <li>Developing full dynamic website for personal hair styling business, including a booking system with client intake forms, service gallery, and contact management to streamline client communication.</li>
+            </ul>
+          </div>
+
+          <div class="job">
+            <h3>Housekeeper</h3>
+            <div class="meta">Elliot Realty — North Myrtle Beach, SC · May 2025 – Present</div>
+            <ul>
+              <li>Manage responsibilities with integrity and reliability, consistently completing tasks on time and above quality standards.</li>
+              <li>Demonstrate attention to detail and strong work ethic to support positive guest experiences during their vacations.</li>
+            </ul>
+          </div>
+
+          <div class="job">
+            <h3>Cashier</h3>
+            <div class="meta">Burlington Coat Factory — North Myrtle Beach, SC · May 2023 – July 2023</div>
+            <ul>
+              <li>Provided excellent and adaptable customer service by maintaining professionalism and optimism in high-stress situations.</li>
+              <li>Strengthened multitasking skills and ability to meet the diverse needs of over 200 customers daily.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section aria-labelledby="research">
+          <h2 id="research">Research Experience</h2>
+          <div class="job">
+            <h3>Undergraduate Researcher</h3>
+            <div class="meta">University of South Carolina — Columbia, SC · June 2024 – July 2024</div>
+            <ul>
+              <li>Prepared and augmented a dataset of over 20,000 white blood cell images to support machine learning classification of <em>Trypanosoma cruzi</em>, the Chagas disease parasite.</li>
+              <li>Applied Python libraries (NumPy, Pandas, OpenCV) for processing, augmentation, and dataset expansion.</li>
+              <li>Strengthened skills in data science and image processing while contributing to improving model robustness.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section aria-labelledby="leadership">
+          <h2 id="leadership">Leadership Experience</h2>
+          <div class="job">
+            <h3>Student Ambassador</h3>
+            <div class="meta">South Carolina Governor's School for Science and Mathematics — Hartsville, SC · Aug 2024 – May 2025</div>
+            <ul>
+              <li>Led campus tours and shadow days for prospective students, effectively communicating school culture and opportunities.</li>
+              <li>Coordinated and directed major promotional events, ensuring smooth scheduling and guest flow throughout campus.</li>
+              <li>Collaborated with staff and fellow ambassadors to create welcoming, informative experiences for hundreds of visitors.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section aria-labelledby="projects">
+          <h2 id="projects">Projects</h2>
+          <div class="job">
+            <h3>Game Design Project — Developer</h3>
+            <div class="meta">Hartsville, SC · January 2024 – May 2024</div>
+            <ul>
+              <li>Designed and programmed a narrative-driven simulation game in Java (Processing) in under four months, featuring 3 in-game days and 6 unique endings.</li>
+              <li>Built a custom 300-line branching dialogue system that dynamically tracked player choices and calculated scores in real time.</li>
+              <li>Integrated original visuals, sound design, and music to create an immersive user experience.</li>
+              <li>Implemented a data storage system to record player decisions and display daily performance summaries.</li>
+              <li class="award">Awarded Game Design Award from the South Carolina Governor’s School for Science and Mathematics.</li>
+            </ul>
+          </div>
+        </section>
+      </main>
+
+      <!-- Sidebar -->
+      <aside>
+        <section aria-labelledby="skills">
+          <h2 id="skills">Skills</h2>
+          <p class="muted"><strong>Programming:</strong> Python, Java, Processing, Lua, HTML</p>
+          <p class="muted"><strong>Tools:</strong> Office365, GitHub, Logisim, Roblox Studio, Processing, Visual Studio Code</p>
+
+          <div style="margin-top:10px">
+            <h2 style="margin-top:6px">Honors & Awards</h2>
+            <ul>
+              <li>Dean Scholar</li>
+              <li>STEM Scholarship</li>
+              <li>Capstone Scholar</li>
+              <li>Game Design Award — SC Governor’s School</li>
+            </ul>
+          </div>
+        </section>
+      </aside>
+    </div>
+
+    <footer style="margin-top:18px;font-size:13px;color:var(--muted)">
+      <div>Converted from: <strong>ResumeF25.pdf</strong>. Source preserved for accuracy. :contentReference[oaicite:1]{index=1}</div>
+      <!-- this HTML content was created by ChatGPT -->
+    </footer>
+  </article>
+</body>
+</html>
