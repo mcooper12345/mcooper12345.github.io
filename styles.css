@@ -1,15 +1,18 @@
-/* Modern color scheme */
+/* ===========================
+   BASIC PAGE STYLE
+   =========================== */
 body {
-  color: #1e1e2f;            /* dark text */
-  background: #f5f7fa;       /* light gray-blue */
+  color: #1e1e2f;
+  background: #f5f7fa;
   font-family: 'Trebuchet MS', sans-serif;
   margin: 40px;
 }
 
+/* HEADER */
 h1 {
-  font-family:"Brush Script MT", cursive;
+  font-family: "Brush Script MT", cursive;
   text-align: center;
-  color: #2c3e50;            /* dark slate */
+  color: #2c3e50;
   font-size: 3em;
   text-shadow: 1px 1px 2px rgba(44, 62, 80, 0.2);
   margin-bottom: 20px;
@@ -20,20 +23,40 @@ h2 {
   margin-top: 30px;
 }
 
-/* Projects in a single horizontal row */
+/* ===========================
+   SECTION ALIGNMENT CONTAINERS
+   =========================== */
+.about,
+.skills,
+.contact,
+.projects-section {
+  max-width: 900px;
+  margin: 0 auto 30px;
+  padding: 0 1rem;
+}
+
+.contact {
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* ===========================
+   PROJECTS LAYOUT
+   =========================== */
+
 .projects {
   display: flex;
-  flex-wrap: nowrap;        /* single row */
-  justify-content: center;  /* center the row */
-  gap: 30px;                /* space between cards */
-  overflow-x: auto;         /* scroll if too small */
+  flex-wrap: nowrap;        /* single horizontal row */
+  justify-content: center;
+  gap: 30px;
+  overflow-x: auto;         /* allows scrolling if too wide */
   padding-bottom: 10px;
-  margin: 0 auto;
+  margin-top: 20px;
 }
 
 .project {
-  flex: 0 0 300px;          /* fixed width */
-  background: #ffffff;      /* card background */
+  flex: 0 0 300px;
+  background: #ffffff;
   border-radius: 15px;
   padding: 20px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
@@ -50,18 +73,7 @@ h2 {
   width: 100%;
   height: auto;
   border-radius: 10px;
-  border: 2px solid #6c63ff;  /* purple accent */
+  border: 2px solid #6c63ff;
   display: block;
   margin-bottom: 10px;
-}
-
-/* Other sections */
-.about, .skills, .contact {
-  max-width: 900px;
-  margin: 0 auto 30px;
-}
-
-.contact {
-  text-align: center;
-  margin-top: 40px;
 }
